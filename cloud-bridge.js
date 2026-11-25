@@ -19,13 +19,13 @@
  window.fetch=async(input,init={})=>{
   const raw=typeof input==='string'?input:input.url;
   const path=new URL(raw,location.href);
-  if(path.origin!==location.origin||!['/app-settings.json','/api/history','/api/norms'].includes(path.pathname))return nativeFetch(input,init);
+  if(path.origin!==location.origin||!['/app-settings.json','/api/history','/api/norms','/api/register'].includes(path.pathname))return nativeFetch(input,init);
   try{
    if(path.pathname==='/app-settings.json')return response((await jsonp('config')).config);
    if(path.pathname==='/api/norms')return response(await jsonp('norms'));
    if((init.method||'GET').toUpperCase()==='GET')return response(await jsonp('mine',{dev:path.searchParams.get('dev')||''}));
    const entry=JSON.parse(init.body),receipt=crypto.randomUUID().replaceAll('-','');const c=await config();
-   await nativeFetch(c.backendUrl,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'save',entry,receipt})});
+   await nativeFetch(c.backendUrl,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:path.pathname==='/api/register'?'register':'save',entry,receipt})});
    const answer=await jsonp('receipt',{receipt});return response(answer,answer.ok?200:503);
   }catch(e){return response({ok:false,error:e.message},503);}
  };
