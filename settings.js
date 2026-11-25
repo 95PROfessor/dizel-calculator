@@ -22,7 +22,7 @@
   if(!config.sheetUrl&&!config.googleConnected){srcNote('Автоматические нормы ещё не подключены. Используются сохранённые коэффициенты.');return;}
   try{
    const acc={date:'',rows:[]};
-   if(config.sheetUrl){const url=sheetCsvUrl(config.sheetUrl),r=await fetch(url+(url.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('Нет доступа');const text=await r.text();if(/^\s*<!doctype html|^\s*<html/i.test(text))throw Error('Таблица недоступна');rowsFromAoa(parseCsv(text),acc);}
+   if(config.sheetUrl&&!config.googleConnected){const url=sheetCsvUrl(config.sheetUrl),r=await fetch(url+(url.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('Нет доступа');const text=await r.text();if(/^\s*<!doctype html|^\s*<html/i.test(text))throw Error('Таблица недоступна');rowsFromAoa(parseCsv(text),acc);}
    else{const r=await fetch('/api/norms',{cache:'no-store',signal:AbortSignal.timeout(25000)}),j=await r.json();if(!j.ok||!Array.isArray(j.rows))throw Error('Нет таблицы');rowsFromAoa(j.rows,acc);}
    const norms=validate(acc);if(!norms.date)throw Error('Нет даты норм');if(id!==request||config.mode!=='auto')return;
    const applied=apply(norms);srcNote(applied?'Коэффициенты: Google Таблица · обновлено '+new Date().toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'}):'Новые коэффициенты из таблицы применятся со следующей поездки.');
