@@ -4,14 +4,14 @@
  let pendingNorms=null,lastRead=0,lastAuto=0,request=0,reading=null,syncing=false;
  const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
  function validate(value){const norm=normalizeNorms(value);if(!norm||norm.rows.length!==BUILT.rows.length)throw Error('Нужны все направления норм');const names=new Set();for(const [name,values] of norm.rows){if(names.has(name)||!BUILT.rows.some(r=>r[0]===name)||values.some(v=>!Number.isFinite(v)||v<=0))throw Error('Некорректные коэффициенты');names.add(name);}return norm;}
- function apply(norm){
+ function apply(norm){LATEST_NORMS=clone(norm);renderHist();if(flowStage==='result')calc();
   if(flowStage!=='start'&&!same(N,norm)){pendingNorms=clone(norm);return false;}
-  pendingNorms=null;setNorms(clone(norm));try{localStorage.setItem(NC,JSON.stringify(norm));}catch{}return true;
+  pendingNorms=null;setNorms(clone(norm));if(flowStage==='start'){S.normKey=normArchive(norm);S.rawMeta={};if(S.trains[S.cur])S.trains[S.cur].normKey=S.normKey;}renderHist();try{localStorage.setItem(NC,JSON.stringify(norm));}catch{}return true;
  }
  async function ownHistory(){
   if(!ME||syncing||!navigator.onLine||location.protocol==='file:')return;syncing=true;
   try{const r=await fetch('/api/history?dev='+encodeURIComponent(ME.dev),{cache:'no-store',signal:AbortSignal.timeout(25000)}),j=await r.json();if(!j.ok||!Array.isArray(j.items))return;
-   const all=new Map(S.hist.map(e=>[e.id,e]));for(const e of j.items){if(!e||!Array.isArray(e.trains)||!e.trains.length)continue;const old=all.get(e.id);if(!old||(e.tu||e.t)>(old.tu||old.t)){const {dev,name,...entry}=e;all.set(e.id,entry);}}
+   const all=new Map(S.hist.map(e=>[e.id,e]));for(const e of j.items){if(!e||!Array.isArray(e.trains)||!e.trains.length)continue;const old=all.get(e.id);if(old&&(S.out||[]).includes(e.id))continue;if(!old||(e.tu||e.t)>(old.tu||old.t)){const {dev,name,...entry}=e;all.set(e.id,{...entry,syncedAt:Date.now()});}}
    S.hist=[...all.values()].sort((a,b)=>b.t-a.t).slice(0,300);persist();renderHist();
   }catch{}finally{syncing=false;}
  }
@@ -25,7 +25,7 @@
    if(config.sheetUrl&&!config.googleConnected){const url=sheetCsvUrl(config.sheetUrl),r=await fetch(url+(url.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('Нет доступа');const text=await r.text();if(/^\s*<!doctype html|^\s*<html/i.test(text))throw Error('Таблица недоступна');rowsFromAoa(parseCsv(text),acc);}
    else{const r=await fetch('/api/norms',{cache:'no-store',signal:AbortSignal.timeout(25000)}),j=await r.json();if(!j.ok||!Array.isArray(j.rows))throw Error('Нет таблицы');rowsFromAoa(j.rows,acc);}
    const norms=validate(acc);if(!norms.date)throw Error('Нет даты норм');if(id!==request||config.mode!=='auto')return;
-   const applied=apply(norms);srcNote(applied?'Коэффициенты: Google Таблица · обновлено '+new Date().toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'}):'Новые коэффициенты из таблицы применятся со следующей поездки.');
+   const applied=apply(norms);srcNote(applied?'':'Новые коэффициенты из таблицы применятся со следующей поездки.');
   }catch{if(id===request)srcNote('Нет связи с таблицей норм. Используются последние сохранённые коэффициенты.');}
  }
  async function readSettings(force=false){

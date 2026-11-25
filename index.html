@@ -304,14 +304,14 @@ body.noscroll{overflow:hidden}
 html{min-height:100%;background:#101c28}
 body{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;background:transparent}
 body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:url("locomotive-0382.webp") 65% center/cover no-repeat}
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(5,13,22,.18),rgba(5,13,22,.08) 42%,rgba(5,13,22,.38))}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(5,13,22,.10),rgba(5,13,22,.04) 42%,rgba(5,13,22,.26))}
 .wrap{max-width:600px;padding-block:28px 36px;gap:18px}
 .page-nav{align-self:flex-start;margin:0;padding:5px;background:rgba(10,22,34,.8);border:1px solid rgba(225,236,247,.16);border-radius:999px;box-shadow:0 8px 28px rgba(0,0,0,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .page-nav a{color:#d9e3ed}.page-nav a[aria-current="page"]{background:rgba(224,237,250,.16);color:#fff}
 .hero{aspect-ratio:auto;overflow:visible;background:rgba(10,22,34,.7);border:1px solid rgba(225,236,247,.18);border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,.27);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .hero::after{display:none}.hero-txt{position:relative;padding:24px 26px}.hero-txt h1{font-size:28px;line-height:1.15;letter-spacing:-.025em;text-shadow:0 2px 12px rgba(0,0,0,.3)}
 .hero-txt p{margin-top:8px;color:#d4dfea;opacity:1;line-height:1.5}
-#v-calc,#v-admin,.regc{background:rgba(10,22,34,.8);border:1px solid rgba(222,235,248,.18);border-radius:20px;box-shadow:0 18px 56px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.05);padding:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+#v-calc,#v-admin,.regc{background:rgba(10,22,34,.72);border:1px solid rgba(222,235,248,.18);border-radius:20px;box-shadow:0 18px 56px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.05);padding:24px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 #v-calc{gap:18px}.regc{gap:18px}.regc h2{font-size:21px}
 .btn,.dir,.sc,.tr,.hi,input,select{box-shadow:0 3px 12px rgba(0,0,0,.12)}
 .btn,.dir,.sc,input,select{transition:background-color .15s,border-color .15s,box-shadow .15s}
@@ -342,7 +342,7 @@ input::placeholder{color:#a5b5c5;opacity:1}
 .review-field{display:flex;justify-content:space-between;align-items:baseline;text-align:left;gap:14px;padding:12px 14px;background:none;border:0;border-bottom:1px solid var(--line);width:100%;font:inherit;color:var(--fg);cursor:pointer}
 .review-field:last-child{border:0}.review-field span{font-size:13px;color:var(--muted)}.review-field b{text-align:right;font-size:14px;max-width:65%}
 .review-field:hover{background:rgba(255,255,255,.07)}
-</style><style>.chg.unavailable .chk{opacity:.42;cursor:not-allowed}.chg.unavailable input{cursor:not-allowed}</style><script src="cloud-bridge.js"></script></head>
+</style><style>.chg.unavailable .chk{opacity:.42;cursor:not-allowed}.chg.unavailable input{cursor:not-allowed}</style><script src="cloud-bridge.js"></script><style>.event-check{display:flex;align-items:center;gap:10px;padding:10px 0;font-size:14px}.event-check input{width:21px;height:21px;flex:0 0 auto;padding:0}#chgBox{max-height:180px;overflow-y:auto;overscroll-behavior:contain}.norm-compare{font-size:13px;margin:8px 0}.norm-compare.higher{color:#8ad9a7}.norm-compare.lower{color:#ffaaa2}.sync-status{display:block;grid-column:1/-1;font-size:11px;color:var(--muted)}.pair-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:330px;margin:0 auto}.pair-wrap{position:relative;overflow:hidden;border-radius:14px;background:#0a1c2a;border:1px solid var(--line)}.pair-wrap:before{content:'';position:absolute;left:8px;right:8px;top:88px;height:44px;border:1px solid var(--accent);border-radius:9px;pointer-events:none;z-index:1}.pair-wrap:after{content:'';position:absolute;inset:0;background:linear-gradient(#0a1c2ae8,transparent 35%,transparent 65%,#0a1c2ae8);pointer-events:none}.pair-vp{height:220px;overflow-y:auto;overscroll-behavior:contain;padding:88px 0;scrollbar-width:none;touch-action:none}.pair-vp::-webkit-scrollbar{display:none}.pair-item{height:44px;display:flex;align-items:center;justify-content:center;font:28px var(--f-num);color:#9db0c0;user-select:none;-webkit-user-select:none}.pair-item[aria-selected=true]{font-weight:600;color:#fff}.pair-speed{text-align:center;min-height:20px}.weight-pairs>.wh-out{margin:14px 0}.hi .cerow{display:flex;gap:8px;flex-wrap:wrap}.hi .cerow .btn{font-size:13px;padding:10px}.hmore p{font-size:13px}.hmore details{padding:8px 0}</style></head>
 <body>
 <div class="wrap">
   <header class="hero">
@@ -372,7 +372,7 @@ input::placeholder{color:#a5b5c5;opacity:1}
     </div>
 
     <div>
-      <div class="trip"><p class="lbl" id="tripLbl">Поездка</p><span class="tripst" id="tripSt"></span></div>
+      <div class="trip"><p class="lbl" id="tripLbl">Расчёт топлива</p><span class="tripst" id="tripSt"></span></div>
       <div class="trains" id="trains" hidden></div>
       <p class="lbl" id="dirLbl">Откуда</p>
       <div class="dirs" id="dirs"></div>
@@ -396,7 +396,7 @@ input::placeholder{color:#a5b5c5;opacity:1}
       <label class="f"><span>Удельный вес</span><input id="iR" class="num" inputmode="decimal" enterkeyhint="done" autocomplete="off" placeholder="0"></label>
     </div>
     <button class="btn res" id="bRes" type="button">Показать результат</button>
-    <button class="btn" id="bClear" type="button">Новая поездка</button>
+    <button class="btn" id="bClear" type="button">Новый расчёт топлива</button>
     <section class="hist" aria-labelledby="hTitle2">
       <div class="hhead"><h2 id="hTitle2">История</h2></div>
       
@@ -504,7 +504,7 @@ function persist(){
 }
 
 /* ---------- нормы ---------- */
-let N=clone(DEFAULT_NORMS);
+let N=clone(DEFAULT_NORMS),LATEST_NORMS=null;
 let P={"date": "с 9.04.2026, 18 ч", "rows": [["Гуд-Прох", [74, 63.7, 56.4, 51, 46.9, 43.7, 41, 38.8, 37, 34.9, 33.1, 31.6, 30.2, 29, 27.9, 27, 26.2, 25.6, 25, 24.5, 24]], ["Прох-Гуд", [54, 43.3, 35.7, 30, 26.8, 24.2, 22.2, 20.4, 19, 18.1, 17.4, 16.8, 16.3, 15.8, 15.3, 15, 13.8, 12.7, 11.7, 10.8, 10]], ["Гуд-Арт", [64, 53.7, 46.4, 41, 37.5, 34.7, 32.4, 30.6, 29, 27.5, 26.3, 25.2, 24.2, 23.4, 22.6, 22, 21.5, 21, 20.7, 20.3, 20]], ["Арт-Гуд", [66, 56.2, 49.2, 44, 39.3, 35.6, 32.6, 30.1, 28, 26.8, 25.9, 25, 24.3, 23.6, 23, 22.5, 22, 21.5, 21.2, 20.8, 20.5]], ["К-Юрт-Арт", [64, 53.7, 46.4, 41, 37.5, 34.7, 32.4, 30.6, 29, 27.5, 26.3, 25.2, 24.2, 23.4, 22.6, 22, 21.5, 21, 20.7, 20.3, 20]], ["Арт-К-Юрт", [66, 56.2, 49.2, 44, 39.3, 35.6, 32.6, 30.1, 28, 26.8, 25.9, 25, 24.3, 23.6, 23, 22.5, 22, 21.5, 21.2, 20.8, 20.5]], ["Гуд-Гроз", [150, 132, 120, 111, 104, 98.5, 93.9, 90, 84, 79, 74.6, 70.7, 67.3, 64.3, 61.6, 59.2, 57, 55, 53.2, 51.5, 50]], ["Гроз-Гуд", [121.7, 101, 87.6, 76.9, 68.6, 62, 56.6, 52.1, 48.2, 44.9, 42, 39.5, 37.3, 35.3, 33.5, 31.9, 30.5, 29.2, 28, 26.9, 25]], ["Гуд-Мах", [60, 52, 46.2, 42, 39.1, 36.8, 34.9, 33.3, 32, 29.1, 26.6, 24.5, 22.5, 20.8, 19.3, 18, 16.6, 15.5, 14.4, 13.4, 12.5]], ["Мах-Гуд", [70, 60.2, 53.2, 48, 44.2, 41.2, 38.7, 36.7, 35, 32.5, 30.4, 28.5, 26.9, 25.4, 24.1, 23, 22.2, 21.6, 21, 20.5, 20]], ["Гуд-К-Юрт", [74, 63.7, 56.4, 51, 46.9, 43.7, 41, 38.8, 37, 34.9, 33.1, 31.6, 30.2, 29, 27.9, 27, 25.8, 24.7, 23.7, 22.8, 22]], ["К-Юрт-Гуд", [70, 60.2, 53.2, 48, 44.2, 41.2, 38.7, 36.7, 35, 32.5, 30.4, 28.5, 26.9, 25.4, 24.1, 23, 22.2, 21.6, 21, 20.5, 20]], ["Гуд-Мвод", [69, 59.6, 53, 48, 43.9, 40.7, 38, 35.8, 34, 32.1, 30.5, 29.1, 27.9, 26.8, 25.8, 25, 24.5, 24, 23.7, 23.3, 23]], ["Мвод-Гуд", [54, 43.3, 35.7, 30, 26.8, 24.2, 22.2, 20.4, 19, 18.1, 17.4, 16.8, 16.3, 15.8, 15.3, 15, 13.8, 12.7, 11.7, 10.8, 10]], ["Гуд-Кизляр", [68, 57.7, 50.4, 45, 41.2, 38.2, 35.7, 33.7, 32, 30.3, 28.9, 27.7, 26.6, 25.6, 24.7, 24, 23.5, 23, 22.7, 22.3, 22]], ["Кизляр-Гуд", [80, 70.2, 63.2, 58, 53, 49.1, 45.9, 43.2, 41, 39.3, 37.9, 36.7, 35.6, 34.6, 33.7, 33, 31.4, 30, 28.7, 27.5, 26.5]], ["Мах-Артез", [58, 48.2, 41.2, 36, 32.8, 30.2, 28.2, 26.4, 25, 23.7, 22.7, 21.7, 20.9, 20.2, 19.5, 19, 18.5, 18, 17.7, 17.3, 17]], ["Артез-Мах", [62, 53.1, 46.7, 42, 37.6, 34.2, 31.3, 29, 27, 25.9, 25.1, 24.3, 23.6, 23, 22.4, 22, 21, 20.1, 19.3, 18.6, 18]]]};   // прошлые нормы — для сравнения
 const rowOf=name=>{const r=N.rows.find(r=>r[0]===name);return r?r[1]:null};
 function normalizeNorms(j){
@@ -564,13 +564,13 @@ $("sFrom").addEventListener("change",e=>setLeg({f:e.target.value}));
 $("sTo").addEventListener("change",e=>setLeg({t:e.target.value}));
 
 /* ---------- несколько поездов за поездку ---------- */
-const snap=()=>({dir:S.dir,w:S.w,a:S.a,res:!!S.res,chg:!!S.chg,leg:clone(S.leg),pdir:clone(S.pdir),km:$("iK").value,km_m:kmManual});
+const snap=()=>({...clone(S.rawMeta||{}),dir:S.dir,w:S.w,a:S.a,rho:S.rho,normKey:S.normKey||normArchive(),group:S.group||"",res:!!S.res,chg:!!S.chg,leg:clone(S.leg),pdir:clone(S.pdir),km:$("iK").value,km_m:kmManual});
 function ensureTrains(){
   if(!Array.isArray(S.trains)||!S.trains.length)S.trains=[{dir:S.dir,w:S.w,a:S.a,leg:clone(S.leg),pdir:clone(S.pdir),km:"",km_m:false}];
   if(!(S.cur>=0&&S.cur<S.trains.length))S.cur=0;
 }
 function applyTrain(i){
-  S.cur=i;const t=S.trains[i];
+  S.cur=i;const t=S.trains[i];S.rawMeta=clone(t);S.rho=t.rho||S.rho;S.normKey=t.normKey||normArchive();S.group=t.group||"";
   S.dir=t.dir;S.w=t.w||"";S.a=t.a||"";S.res=!!t.res;S.chg=!!t.chg;S.leg=clone(t.leg||{});S.pdir=clone(t.pdir||{});
   if(!rowOf(S.dir))S.dir=N.rows[0][0];
   loadInputs();
@@ -680,7 +680,7 @@ function renderTrains(){
   const add=document.createElement("button");add.type="button";add.className="tr add";add.textContent="+ Поезд";add.onclick=()=>addTrain();if(started)box.append(add);
   const ar=document.createElement("button");ar.type="button";ar.className="tr add res";ar.textContent="+ Резерв";ar.onclick=addReserve;if(started)box.append(ar);
   if(started&&extendOpts().length){const eb=document.createElement("button");eb.type="button";eb.className="tr add";eb.textContent="→ Дальше";eb.title="Поезд пропустили дальше — добавить участок";eb.onclick=extOpen;box.append(eb)}
-  $("bClear").textContent="Новая поездка";
+  $("bClear").textContent="Новый расчёт топлива";
   const ed=S.editId&&S.hist.find(h=>h.id===S.editId),cur=S.tripId&&S.hist.find(h=>h.trip===S.tripId);
   $("tripSt").textContent=ed?`исправление · ${dtf.format(new Date(ed.t))}`:cur?`${S.closed?"завершена":"сохранена"} · ${dtf.format(new Date(cur.t))}`:"новая";
   $("tripSt").className="tripst"+(ed?" ed":"");
@@ -742,7 +742,7 @@ function updateCard(old,e){
   if(same){toast("Без изменений");return true}
   const late=S.editId===old.id||Date.now()-(old.tu||old.t)>SIMILAR_MS;
   const isFix=late&&(changedOld(old,e)||e.trains.length!==old.trains.length)&&S.fixCounted!==old.id;
-  e.id=old.id;e.t=old.t;e.trip=old.trip||old.id;e.tu=Date.now();e.fixes=(old.fixes||0)+(isFix?1:0);e.fixT=(old.fixT||[]).concat(isFix?[Date.now()]:[]);
+  ((S.pendingChanges||(S.pendingChanges={}))[old.id]||((S.pendingChanges)[old.id]=[])).push(entrySnapshot(old));e.id=old.id;e.t=old.t;e.trip=old.trip||old.id;e.tu=Math.max(Date.now(),(old.tu||old.t)+1);e.fixes=(old.fixes||0)+(isFix?1:0);e.fixT=(old.fixT||[]).concat(isFix?[Date.now()]:[]);
   if(old.facts)e.facts=old.facts;if(old.flag)e.flag=old.flag;if(old.edits)e.edits=old.edits;
   if(isFix)S.fixCounted=old.id;
   const i=S.hist.findIndex(x=>x.id===old.id);S.hist[i]=e;S.lastId=e.id;queueSend(e.id);commit();
@@ -943,16 +943,12 @@ function calc0(){
     shown=tv.some(v=>v!==null)?tv.reduce((s,v)=>s+(v||0),0):null;
     if(tv.some(v=>v===null)&&!msg)msg="Не у всех поездов введены вес и оси — в сумму вошли только заполненные.";
   }
+  shown=det.length&&det.every(Boolean)?det.reduce((sum,d)=>sum+d.l,0):null;
   if(det.some(Boolean))kgSum=det.reduce((s,d)=>s+(d?d.kg:0),0);
   $("rKg").textContent=shown!==null&&kgSum!==null?fmt(kgSum,1)+" кг":"";
   $("rL").textContent=shown===null?"—":fmt(shown,1);
   $("rUnit").textContent="л";
-  const pr=$("rPrev");let pl=null;
-  if(SHOW_PREV&&shown!==null&&P&&P.date!==N.date){
-    const pv=list.map(t=>trainLiters(t,P)),cur=list.map(t=>trainLiters(t,N));
-    if(pv.every((v,i)=>(v===null)===(cur[i]===null))){pl=pv.reduce((s,v)=>s+(v||0),0);if(Math.abs(pl-shown)<0.05)pl=null}
-  }
-  pr.hidden=pl===null;if(pl!==null)pr.innerHTML=`До обновления: <b>${fmt(pl,1)} л</b>`;
+  const pr=$("rPrev"),comparison=shown!==null?comparisonFor({trains:det,total:shown,rho:S.rho}):null;pr.hidden=!comparison;pr.className='prev norm-compare '+(comparison?.up?'higher':'lower');if(comparison)pr.textContent='По новым нормам: '+fmt(comparison.l,1)+' л · '+fmt(comparison.kg,1)+' кг';
   liters=shown;
   const h=$("rHint");h.hidden=!(msg||warn);h.textContent=msg||warn;h.classList.toggle("w",!msg&&!!warn);
   $("bRes").textContent="Показать результат";
@@ -1024,7 +1020,7 @@ function renderReview(){
   add("Маршрут",g.st[g.f].n+" → "+g.st[g.t].n,"st");
   add("Расстояние",fmt(g.km,1)+" км","st");
   if(!t.res){add("Вес брутто",fmt(num(t.w),0)+" т","w");add("Количество осей",String(num(t.a)),"a");add("Нагрузка на ось",fmt(num(t.w)/num(t.a),2)+" т","a")}
-  add("Плотность топлива",fmt(num(S.rho),3)+" кг/л","r");add("Норма направления",t.dir,"st");out.append(card);
+  add("Плотность топлива",fmt(rawRho(t),3)+" кг/л","r");add("Норма направления",t.dir,"st");out.append(card);
  });
 }
 function reviewTrip(){
@@ -1032,7 +1028,7 @@ function reviewTrip(){
  if(S.trains.some(t=>!trainDetail(t))){toast("Проверьте вес, оси и плотность топлива");return}
  flowStage="review";shownSig="";calc();$("review").scrollIntoView({block:"start",behavior:"smooth"});
 }
-$("bClear").onclick=()=>{newTrip();toast("Новая поездка");window.scrollTo({top:0,behavior:"smooth"})};
+$("bClear").onclick=()=>{newTrip();toast("Новый расчёт топлива");window.scrollTo({top:0,behavior:"smooth"})};
 /* «Исправить поездку» из истории: загрузить её поезда в калькулятор */
 function rawOf(h){
   if(Array.isArray(h.raw)&&h.raw.length)return clone(h.raw);
@@ -1128,14 +1124,14 @@ function route(){}
 const ecoOf=h=>{const f=(h.facts||[]).slice(-1)[0];return f&&Number.isFinite(f.used)?h.total-f.used:null};
 function ecoText(d){return Math.abs(d)<0.05?"точно по норме":d>0?`сэкономлено ${fmt(d,1)} л`:`перерасход ${fmt(-d,1)} л`}
 /* путь поездки одной строкой: Гудермес → Хасавюрт → Кизилюрт → Махачкала → Гудермес */
-function tripRoute(list){const out=[];for(const x of list){if(!x.from)return "";if(out[out.length-1]!==x.from)out.push(x.from);out.push(x.to)}return out.join(" → ")}
-function histItem(h,opt){
+function tripRoute(list){const groups=[];for(const x of list){if(!x.from)return '';const last=groups.at(-1);if(last&&x.chg&&!x.res&&!last.res&&last.to===x.from)last.to=x.to;else groups.push({from:x.from,to:x.to,res:x.res});}return groups.map(x=>(x.res?'Резерв: ':'')+shortSt(x.from)+' → '+shortSt(x.to)).join(' · ');}
+function baseHistItem(h,opt){
   const d=document.createElement("details");d.className="hi";
   const sm=document.createElement("summary");
   sm.innerHTML='<span class="hd"></span><span class="hl"></span><span class="hn"></span>';
   const hd=sm.querySelector(".hd");
   const nTr=h.trains.filter(x=>!x.chg&&!x.res).length;
-  hd.textContent="Поездка · "+dtf.format(new Date(h.t))+(opt.admin?" · "+(h.name||"Без имени"):"")+(nTr>1?` · ${nTr} ${nTr<5?"поезда":"поездов"}`:"");
+  hd.textContent="Расчёт · "+dtf.format(new Date(h.t))+(opt.admin?" · "+(h.name||"Без имени"):"")+(nTr>1?` · ${nTr} ${nTr<5?"поезда":"поездов"}`:"");
   const tag=(t,cls,title)=>{const x=document.createElement("span");x.className="tag"+(cls?" "+cls:"");x.textContent=t;if(title)x.title=title;hd.append(" ",x)};
   if(h.flag)tag(h.flag==="edit"?`изменено${h.edits>1?" ×"+h.edits:""}`:"повтор","",h.flag==="edit"?"Расчёт пересчитан и заменён":"Похож на предыдущий расчёт");
   if(h.fixes&&opt.admin)tag(`исправлено ${h.fixes} раз${(h.fixT||[]).length?" · "+dtf.format(new Date(h.fixT[h.fixT.length-1])):""}`,"",h.fixT?"Исправления: "+h.fixT.map(t=>dtf.format(new Date(t))).join(", "):"");
@@ -1330,7 +1326,8 @@ const digits=(v,n)=>String(Math.max(0,Math.round(v))).padStart(n,"0").slice(-n).
 const D10=[..."0123456789"];
 const RHO=Array.from({length:51},(_,i)=>(0.8+i/1000).toFixed(3).replace(".",","));
 let SH={};   // текущее окно
-function sheetShow(cfg){
+let sheetHideTimer=0,wizardBackup=null;
+function sheetShow(cfg){clearTimeout(sheetHideTimer);
   SH=cfg;$("sheetBg").hidden=false;$("sheet").hidden=false;document.body.classList.add("noscroll");
   $("shTitle").textContent=cfg.title;
   const dots=$("shDots");dots.replaceChildren();for(let i=0;i<(cfg.dots||0);i++){const d=document.createElement("i");if(i===cfg.dot)d.className="on";dots.append(d)}
@@ -1338,14 +1335,15 @@ function sheetShow(cfg){
   const body=$("shBody");body.replaceChildren();cfg.render.call(cfg,body);
   requestAnimationFrame(()=>$("sheet").classList.add("up"));
 }
-function sheetHide(){$("sheet").classList.remove("up");$("sheetBg").hidden=true;document.body.classList.remove("noscroll");setTimeout(()=>{$("sheet").hidden=true},180)}
-const sheetCancel=()=>{sheetHide();if(CE)ceEnd(false);else newTrip()};
+function sheetHide(){clearTimeout(sheetHideTimer);$("sheet").classList.remove("up");$("sheetBg").hidden=true;document.body.classList.remove("noscroll");sheetHideTimer=setTimeout(()=>{if(!$("sheet").classList.contains("up"))$("sheet").hidden=true},180)}
+const sheetCancel=()=>{sheetHide();if(CE)ceEnd(false);else if(wizardBackup){const b=wizardBackup;wizardBackup=null;S=b.state;flowStage=b.stage;shownSig=b.shown;applyTrain(Math.min(S.cur,S.trains.length-1));calc();}};
 $("shClose").onclick=sheetCancel;$("sheetBg").onclick=sheetCancel;
 $("shNext").onclick=()=>{const ok=SH.onNext?SH.onNext():true;if(ok===false)return;if(SH.after)SH.after();else sheetHide()};
 $("shBack").onclick=()=>SH.onBack&&SH.onBack();
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("sheet").hidden)sheetCancel()});
 
 const lastNum=(k,def)=>{for(const t of (S.trains||[]))if(num(t[k])>0&&!t.res)return num(t[k]);for(const h of S.hist)for(const x of h.trains)if(x[k]>0)return x[k];return def};
+let wzIncludeRho=false;
 const STEPS=[
   {id:"st",title:"Откуда и куда",show:()=>!!legOf(S.dir),render(body){
     /* откуда — любая станция, куда — только достижимые; направление и норма подбираются сами */
@@ -1390,23 +1388,15 @@ const STEPS=[
     box.innerHTML='<label class="chk"><input type="checkbox" id="chgOn"> Меняли номер поезда в пути</label><div id="chgBox" hidden></div>';
     body.append(box);
     const cb=box.querySelector("#chgOn"),cbox=box.querySelector("#chgBox");let pick=0,mids=[];
-    /* станции, где смена номера меняет норму хотя бы одного участка */
-    const useful=()=>{if(S.res)return [];const q=legOf(S.dir),from=q.st[q.f].n,to=q.st[q.t].n;
-      return q.st.slice(q.f+1,q.t).map(x=>x.n).filter(x=>dirForPart(S.dir,q.v,from,x).dir!==S.dir||dirForPart(S.dir,q.v,x,to).dir!==S.dir)};
-    const vis=()=>{const ok=useful().length>0;box.hidden=false;cb.disabled=!ok;box.classList.toggle("unavailable",!ok);if(!ok&&cb.checked){cb.checked=false;cbox.hidden=true;wzSplit=null}return ok};
-    const drawChg=()=>{cbox.replaceChildren();const q=legOf(S.dir);mids=useful();
-      if(!mids.length)return;
-      if(!(pick>=0&&pick<mids.length)||!wzSplit||mids[pick]!==wzSplit)pick=Math.max(0,mids.indexOf(wzSplit)>=0?mids.indexOf(wzSplit):(()=>{for(const c of CHG_ST){const k=mids.indexOf(c);if(k>=0)return k}return 0})());
-      const pv=document.createElement("p");pv.className="wh-out";
-      const show=()=>{const x=mids[pick],from=q.st[q.f].n,to=q.st[q.t].n,a=dirForPart(S.dir,q.v,from,x),b=dirForPart(S.dir,q.v,x,to);
-        const km=(p,f,t)=>{const st=legStations(DIRS[p.dir][p.v]),i=st.findIndex(y=>y.n===f),j=st.findIndex(y=>y.n===t);return i>=0&&j>=0?kmStr(Math.abs(st[j].d-st[i].d)):"?"};
-        pv.innerHTML=`${esc(from)} → ${esc(x)}: <b>${esc(a.dir)}</b>, ${km(a,from,x)} км<br>${esc(x)} → ${esc(to)}: <b>${esc(b.dir)}</b>, ${km(b,x,to)} км`};
-      const wr=document.createElement("div");wr.className="whs one";wr.style.maxWidth="260px";
-      wr.append(wheel(mids,pick,i=>{pick=i;show()},"Станция смены").el);cbox.append(wr,pv);show()};
-    cb.checked=!!wzSplit;cbox.hidden=!cb.checked;if(vis()&&cb.checked)drawChg();
-    cb.onchange=()=>{cbox.hidden=!cb.checked;if(cb.checked)drawChg();else wzSplit=null};
-    this.onNext=()=>{wzSplit=!box.hidden&&cb.checked&&mids.length?mids[pick]:null;return true};
-    this.onStations=()=>{if(vis()&&cb.checked)drawChg()};
+    const selected=new Set(Array.isArray(wzSplit)?wzSplit:wzSplit?[wzSplit]:[]);
+    const useful=()=>{const q=legOf(S.dir);return q.st.slice(q.f+1,q.t).map(x=>x.n)};
+    const vis=()=>{box.hidden=false;cb.disabled=false;box.classList.remove('unavailable');return true};
+    const drawChg=()=>{cbox.replaceChildren();mids=useful();for(const station of [...selected])if(!mids.includes(station))selected.delete(station);
+      if(!mids.length){const note=document.createElement('p');note.className='note';note.textContent='Нет промежуточных станций. Следующий участок можно добавить в истории.';cbox.append(note);}
+      for(const station of mids){const label=document.createElement('label');label.className='event-check';const input=document.createElement('input');input.type='checkbox';input.checked=selected.has(station);input.onchange=()=>input.checked?selected.add(station):selected.delete(station);label.append(input,document.createTextNode(station));cbox.append(label);}};
+    cb.checked=selected.size>0;cbox.hidden=!cb.checked;vis();if(cb.checked)drawChg();cb.onchange=()=>{cbox.hidden=!cb.checked;if(cb.checked)drawChg();else selected.clear();};
+    this.onNext=()=>{wzSplit=cb.checked&&selected.size?[...selected]:null;return true};
+    this.onStations=()=>{vis();if(cb.checked)drawChg()};
   }},
   {id:"w",title:"Вес брутто",show:()=>!S.res&&!wzRes,render(body){
     const wrap=document.createElement("div");body.append(wrap);
@@ -1444,7 +1434,7 @@ const STEPS=[
     body.append(out);if(out.querySelector(".ka"))out.querySelector(".ka").onclick=()=>{autoKm();calc();show()};show();
   }},
   /* удельный вес один на поездку: спрашивается у первого поезда, у остальных — только по нажатию фишки */
-  {id:"r",title:"Удельный вес топлива",show:()=>wzWant==="r"||S.cur===0||!(num(S.rho)>0),render(body){
+  {id:"r",title:"Удельный вес топлива",show:()=>wzWant==="r"||wzIncludeRho,render(body){
     let r=num(S.rho);if(!(r>=0.8&&r<=0.85)){r=Math.min(0.85,Math.max(0.8,r>0?r:0.83));setVal("iR",r.toFixed(3).replace(".",","))}
     const out=document.createElement("p");out.className="wh-out big";
     const row=document.createElement("div");row.className="whs one";
@@ -1461,16 +1451,246 @@ function wizGo(id){
   sheetShow({sid:st.id,title:st.title,dots:wzList.length,dot:wzI,back:wzI>0,next:last?"Проверить данные":"Далее",render:st.render,
     onBack:()=>wizGo(wzList[Math.max(0,wzI-1)].id),
     after:()=>{wzList=STEPS.filter(s=>s.show()&&!s.solo);const i=wzList.findIndex(s=>s.id===st.id);
-      if(i<wzList.length-1)wizGo(wzList[i+1].id);else{sheetHide();setTimeout(()=>{const x=wzSplit;wzSplit=null;if(x)splitAt(x);const pr=wzPre;wzPre=null;if(pr)addPre(pr);if(CE)ceEnd(true);else reviewTrip()},200)}}});
+      if(i<wzList.length-1)wizGo(wzList[i+1].id);else{sheetHide();setTimeout(()=>{const x=wzSplit;wzSplit=null;if(x)splitAt(x);const pr=wzPre;wzPre=null;if(pr)addPre(pr);completeConsist();if(CE)ceEnd(true);else reviewTrip()},200)}}});
 }
-function wizOpen(id,opt){if(!CE)flowStage="entry";wzWant=id||"st";if(!id||id==="st"){wzSplit=null;wzPre=(opt&&opt.pre)||null}wzRes=!!(opt&&opt.res);wizGo(id||"st")}
+function wizOpen(id,opt){wzIncludeRho=!(num(S.rho)>0);if(!CE){wizardBackup={state:clone(S),stage:flowStage,shown:shownSig};flowStage="entry";}wzWant=id||"st";if(!id||id==="st"){wzSplit=null;wzPre=(opt&&opt.pre)||null}wzRes=!!(opt&&opt.res);wizGo(id||"st")}
 /* поля на странице открывают нужный шаг */
 for(const [id,step] of [["iW","w"],["iA","a"],["iK","k"],["iR","r"]]){const el=$(id);el.readOnly=true;el.setAttribute("inputmode","none");
   el.addEventListener("click",()=>wizOpen(step));el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();wizOpen(step)}})}
 for(const id of ["sFrom","sTo"]){const el=$(id);el.addEventListener("mousedown",e=>{e.preventDefault();wizOpen("st")});el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();wizOpen("st")}})}
 
+/* Versioned calculations and route events. Existing storage keys stay unchanged. */
+function normArchive(set=N){
+ const json=JSON.stringify(set);let hash=2166136261;for(let i=0;i<json.length;i++)hash=Math.imul(hash^json.charCodeAt(i),16777619);
+ const key=(hash>>>0).toString(36);(S.normArchives||(S.normArchives={}))[key]=clone(set);return key;
+}
+function trainNorm(t){return S.normArchives?.[t.normKey]||N;}
+function rawRho(t){return num(t.rho||S.rho);}
+function calculationDetail(t,set,force=false){
+ const g=legOf(t.dir,t.leg),w=num(t.w),a=num(t.a),rho=rawRho(t),km=t.km_m?num(t.km):g?.km;
+ if(!g||!(km>0)||!(rho>0))return null;
+ const common={chg:!!t.chg,res:!!t.res,dir:t.dir,from:g.st[g.f].n,to:g.st[g.t].n,km,rho:String(t.rho||S.rho),normDate:set.date,normKey:t.normKey||'',group:t.group||'',event:t.event||'',numberChanges:clone(t.numberChanges||[])};
+ if(t.res){const kg=resKg(km);return {...common,w:0,a:0,load:0,L10:0,coef:RES_COEF,note:'резерв',kg,l:kg/rho};}
+ if(!(w>0)||!Number.isInteger(a)||a<4||a>600)return null;
+ const values=set.rows.find(row=>row[0]===t.dir)?.[1];if(!values)return null;
+ const legacy=!force&&t.legacyDir===t.dir&&num(t.legacyW)===w&&num(t.legacyA)===a&&Number.isFinite(t.legacyCoef);
+ const c=legacy?{...coefFor(values,w/a),coef:t.legacyCoef,note:'сохранённый коэффициент'}:coefFor(values,w/a);
+ const kg=c.coef*w*km/10000;
+ return {...common,normDate:legacy?t.legacyDate||set.date:set.date,w,a,load:w/a,L10:c.L10,coef:c.coef,note:c.note,kg,l:kg/rho};
+}
+function trainDetail(t){return calculationDetail(t,trainNorm(t));}
+function trainLiters(t,set){return calculationDetail(t,set,true)?.l??null;}
+function rawOf(h){
+ Object.assign(S.normArchives||(S.normArchives={}),clone(h.normSets||{}));
+ const original=Array.isArray(h.raw)&&h.raw.length?clone(h.raw):h.trains.map(x=>{
+  const opts=DIRS[x.dir]||[];let v=opts.findIndex(o=>{const st=legStations(o);return st.some(y=>y.n===x.from)&&st.some(y=>y.n===x.to)});if(v<0)v=0;
+  return {dir:x.dir,w:x.res?'':String(x.w||''),a:x.res?'':String(x.a||''),res:!!x.res,chg:!!x.chg,leg:{[x.dir]:{v,f:x.from,t:x.to}},pdir:{},km:kmStr(x.km),km_m:false};
+ });
+ original.forEach((t,i)=>{const x=h.trains[i];if(!x)return;t.rho=t.rho||x.rho||h.rho;t.group=t.group||x.group||('old-'+i);t.normKey=t.normKey||x.normKey;
+  if(!t.normKey){t.normKey=normArchive(h.norm===P?.date?P:N);t.legacyCoef=x.coef;t.legacyW=x.w;t.legacyA=x.a;t.legacyDir=x.dir;t.legacyDate=x.normDate||h.norm;}
+  const g=legOf(t.dir,t.leg);if(g&&Math.abs(g.km-x.km)>.05){t.km_m=true;t.km=kmStr(x.km);}
+ });return original;
+}
+function entrySnapshot(h){const {versions,raw,normSets,syncedAt,pendingChanges,...snapshot}=h;return clone(snapshot);}
+function entryContent(h){return JSON.stringify([h.total,h.rho,h.trains,h.facts||[]]);}
+function buildEntry(){
+ const list=S.trains.map((t,i)=>i===S.cur?snap():t),details=list.map(trainDetail);if(!details.length||details.some(x=>!x))return null;
+ const normSets={};for(const t of list)if(t.normKey&&S.normArchives?.[t.normKey])normSets[t.normKey]=clone(S.normArchives[t.normKey]);
+ return {id:crypto.randomUUID(),trip:S.tripId||'',t:Date.now(),rho:S.rho,norm:[...new Set(details.map(x=>x.normDate))].join(' / '),normSets,total:details.reduce((s,x)=>s+x.l,0),trains:details,raw:clone(list)};
+}
+function tripCard(){
+ const h=S.hist.find(x=>x.id===S.editId||S.tripId&&(x.trip||x.id)===S.tripId);return h||null;
+}
+function updateCard(old,e){
+ if(old.facts)e.facts=clone(old.facts);if(entryContent(old)===entryContent(e)){toast('Без изменений');return true;}
+ e.id=old.id;e.t=old.t;e.trip=old.trip||old.id;e.tu=Date.now();e.fixes=(old.fixes||0)+1;e.fixT=(old.fixT||[]).concat(e.tu);e.versions=[entrySnapshot(old)];
+ if(old.facts)e.facts=old.facts;const i=S.hist.findIndex(x=>x.id===old.id);S.hist[i]=e;S.lastId=e.id;queueSend(e.id);commit();toast('Расчёт обновлён');return true;
+}
+function saveHist(){
+ const e=buildEntry();if(!e)return false;let old=tripCard();
+ if(!old&&S.checkCandidate){const candidate=S.hist.find(x=>x.id===S.checkCandidate);if(candidate&&routeKey(candidate.trains)===routeKey(e.trains)&&e.trains.every((t,i)=>{const p=candidate.trains[i];return [num(p.w)===num(t.w),num(p.a)===num(t.a),num(p.rho||candidate.rho)===num(t.rho||e.rho)].filter(Boolean).length>=2;}))old=candidate;S.checkCandidate=null;}
+ if(old){S.tripId=old.trip||old.id;return updateCard(old,e);}
+ e.trip=e.id;S.tripId=e.id;S.closed=false;addEntry(e);toast('Сохранено на телефоне');return true;
+}
+function closeIfHome(){} // Returning to a station does not close the calculation.
+function newTrip(){
+ flowStage='start';shownSig='';lastTotal=null;kmManual=false;
+ S.rawMeta={};S.dir='Гуд-Прох';S.w='';S.a='';S.rho='';S.res=false;S.chg=false;S.leg={};S.pdir={};S.br=null;S.normKey=normArchive();S.group=crypto.randomUUID();S.event='';S.numberChanges=[];
+ S.trains=[{dir:S.dir,w:'',a:'',rho:'',res:false,chg:false,leg:{},pdir:{},km:'',km_m:false,normKey:S.normKey,group:S.group}];S.cur=0;
+ S.tripId=null;S.editId=null;S.checkCandidate=null;S.fixCounted=null;S.savedSig='';S.closed=false;
+ loadInputs();autoKm();persist();renderTrains();renderDirs();calc();window.dizelSettings?.applyPending();
+}
+function tripSig(){return JSON.stringify(S.trains.map((t,i)=>{const x=i===S.cur?snap():t,g=legOf(x.dir,x.leg);return [x.dir,g?.st[g.f].n,g?.st[g.t].n,x.w,x.a,x.rho,x.res,x.normKey,x.km_m?x.km:''];}));}
+function dirForPart(main,v,from,to){
+ const mo=DIRS[main]?.[v];if(!mo)return {dir:main,v};const parent=legStations(mo),f=parent.findIndex(x=>x.n===from),t=parent.findIndex(x=>x.n===to);if(f<0||t<=f)return {dir:main,v};
+ let best={dir:main,v,len:parent.at(-1).d};
+ for(const [dir,opts] of Object.entries(DIRS))opts.forEach((o,vi)=>{
+  if(o.ri!==mo.ri||!rowOf(dir))return;const st=legStations(o),a=st.findIndex(x=>x.n===from),b=st.findIndex(x=>x.n===to);
+  if(a<0||b<=a)return;const boundary=(o.a===from&&from!==mo.a&&from!==mo.b)||(o.b===to&&to!==mo.a&&to!==mo.b)||(o.a===from&&o.b===to);if(!boundary)return;
+  if(st.at(-1).d<best.len)best={dir,v:vi,len:st.at(-1).d};
+ });return {dir:best.dir,v:best.v};
+}
+function partTrain(base,main,v,from,to,chg){
+ const p=dirForPart(main,v,from,to),t={...clone(base),dir:p.dir,chg,km:'',km_m:false};t.leg={...(t.leg||{}),[p.dir]:{v:p.v,f:from,t:to}};return t;
+}
+function splitAt(stations){
+ S.trains[S.cur]=snap();const base=S.trains[S.cur],g=legOf(base.dir,base.leg);if(!g)return;
+ const chosen=new Set(Array.isArray(stations)?stations:[stations]),from=g.st[g.f].n,to=g.st[g.t].n;const effective=new Set([...chosen].filter(x=>dirForPart(base.dir,g.v,from,x).dir!==base.dir||dirForPart(base.dir,g.v,x,to).dir!==base.dir));const points=g.st.slice(g.f,g.t+1).filter((x,i,arr)=>i===0||i===arr.length-1||effective.has(x.n));
+ const parts=[];for(let i=0;i<points.length-1;i++){const part=partTrain(base,base.dir,g.v,points[i].n,points[i+1].n,i?true:!!base.chg);part.numberChanges=[...(base.numberChanges||[]),...chosen];parts.push(part);}
+ if(parts.length){S.trains.splice(S.cur,1,...parts);applyTrain(S.cur);}
+}
+function comparisonFor(h,set=LATEST_NORMS||N){
+ let liters=0,kg=0;for(const t of h.trains){const rho=num(t.rho||h.rho);if(!(rho>0))return null;const row=set.rows.find(x=>x[0]===t.dir)?.[1];if(!t.res&&!row)return null;const k=t.res?resKg(t.km):coefFor(row,t.w/t.a).coef*t.w*t.km/10000;kg+=k;liters+=k/rho;}
+ return Math.abs(liters-h.total)>=.05?{l:liters,kg,up:liters>h.total}:null;
+}
+function comparisonNode(h){const c=comparisonFor(h);if(!c)return null;const el=document.createElement('p');el.className='norm-compare '+(c.up?'higher':'lower');el.textContent='По новым нормам: '+fmt(c.l,1)+' л · '+fmt(c.kg,1)+' кг';return el;}
+function historyVersionView(version,label){
+ const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent=label+' · '+fmt(version.total,1)+' л';details.append(summary);
+ for(const t of version.trains||[]){const p=document.createElement('p');p.textContent=(t.res?'Резерв · ':'')+t.from+' → '+t.to+' · '+kmStr(t.km)+' км'+(t.res?'':' · '+fmt(t.w,0)+' т · '+t.a+' осей')+' · коэф. '+fmt(t.coef,2)+' · '+fmt(t.l,1)+' л · плотность '+(t.rho||version.rho)+' · '+(t.normDate||version.norm||'');details.append(p);}return details;
+}
+function histItem(h,opt){
+ const d=baseHistItem(h,opt),body=d.querySelector('.hb'),summary=d.querySelector('summary');
+ const status=document.createElement('small');status.className='sync-status';status.textContent=(S.out||[]).includes(h.id)?'На телефоне · ожидает отправки':h.syncedAt?'Синхронизировано':'Сохранено';summary.append(status);
+ const cmp=comparisonNode(h);if(cmp)body.prepend(cmp);
+ if(opt.own){
+  const row=document.createElement('div');row.className='cerow';
+  for(const [label,action] of [['Прицепка / отцепка',()=>consistChange(h.id)],['Меняли номер',()=>numberChange(h.id)]]){const b=document.createElement('button');b.type='button';b.className='btn';b.textContent=label;b.onclick=action;row.append(b);}body.prepend(row);
+  const previous=(h.versions||[]).at(-1);if(previous)body.append(historyVersionView(previous,'Предыдущая проверка'));
+ }
+ return d;
+}
+function ceStart(id){
+ if(CE)return false;const h=S.hist.find(x=>x.id===id);if(!h)return false;persist();CE={id,st:clone(S)};
+ S.trains=rawOf(h);S.rho=h.rho||S.rho;S.editId=h.id;S.tripId=h.trip||h.id;S.closed=false;S.cur=0;applyTrain(0);return true;
+}
+function completeConsist(){
+ const current=snap();S.trains[S.cur]=current;if(!current.group)return;
+ S.trains=S.trains.map(t=>t.group===current.group&&t.needsData?{...t,w:current.w,a:current.a,rho:current.rho,needsData:false}:t);
+}
+function ceEnd(save){
+ if(!CE)return;const c=CE;CE=null;
+ if(!save){S=c.st;applyTrain(Math.min(S.cur,S.trains.length-1));loadInputs();calc();return;}
+ completeConsist();S.editId=c.id;CE_OPEN.add(c.id);flowStage='review';shownSig='';persist();renderHist();reviewTrip();window.scrollTo({top:0,behavior:'smooth'});
+}
+function trainSelector(body,h,onChange){
+ const label=document.createElement('label');label.className='f';label.innerHTML='<span>Участок</span>';const select=document.createElement('select');
+ h.trains.forEach((t,i)=>{if(!t.res)select.add(new Option(t.from+' → '+t.to,i));});label.append(select);body.append(label);select.onchange=()=>onChange(+select.value);return select;
+}
+function selectField(body,title){const label=document.createElement('label');label.className='f';const span=document.createElement('span');span.textContent=title;const select=document.createElement('select');label.append(span,select);body.append(label);return select;}
+function consistChange(id){
+ const h=S.hist.find(x=>x.id===id);if(!h)return;let index=h.trains.findIndex(x=>!x.res),at,destination;
+ sheetShow({title:'Новые документы поезда',next:'Ввести новые данные',back:false,render(body){
+  const station=selectField(body,'Станция изменения состава'),dest=selectField(body,'Дальше до станции');
+  const fillDest=()=>{at=station.value;const options=routeOpts(at);dest.replaceChildren(...options.map(o=>new Option(o.to,o.to)));const previous=h.trains[index].to;if(options.some(o=>o.to===previous))dest.value=previous;destination=dest.value;};
+  const fill=i=>{index=i;const t=h.trains[i],raw=rawOf(h)[i],g=legOf(raw.dir,raw.leg);station.replaceChildren(...g.st.slice(g.f+1,g.t+1).map(x=>new Option(x.n,x.n)));fillDest();};
+  const chooser=trainSelector(body,h,fill);if(index<0){toast('Выберите участок с поездом');return;}chooser.value=String(index);station.onchange=fillDest;dest.onchange=()=>destination=dest.value;fill(index);
+  const note=document.createElement('p');note.className='note';note.textContent='До этой станции остаются прежние данные. После неё введите общий вес и оси из новых документов.';body.append(note);
+  this.onNext=()=>{if(!at||!destination){toast('Выберите станции');return false;}if(!ceStart(id))return false;
+   const base=S.trains[index],g=legOf(base.dir,base.leg),from=g.st[g.f].n,parts=[];
+   if(from!==at)parts.push(partTrain(base,base.dir,g.v,from,at,!!base.chg));
+   const choice=routeOpts(at).find(x=>x.to===destination);if(!choice){ceEnd(false);return false;}
+   let next=partTrain(base,base.dir,g.v,at,destination,true);const check=legOf(next.dir,next.leg);
+   if(!check||check.st[check.f].n!==at||check.st[check.t].n!==destination)next=routeRaw(choice,at,destination,base,false);
+   next.w='';next.a='';next.normKey=normArchive(LATEST_NORMS||N);next.group=crypto.randomUUID();next.event='Изменение состава';next.needsData=true;delete next.legacyCoef;
+   parts.push(next);S.trains.splice(index,1,...parts);applyTrain(index+parts.length-1);sheetHide();setTimeout(()=>wizOpen('w'),210);return false;
+  };
+ }});
+}
+function numberChange(id){
+ const h=S.hist.find(x=>x.id===id);if(!h)return;let index=h.trains.findIndex(x=>!x.res);
+ sheetShow({title:'Смена номера поезда',next:'Выбрать станции',back:false,render(body){trainSelector(body,h,i=>index=i);this.onNext=()=>{if(index<0||!ceStart(id))return false;applyTrain(index);sheetHide();setTimeout(()=>numberStationsOpen(),210);return false;};}});
+}
+function numberStationsOpen(){
+ const g=legOf(S.dir),available=g.st.slice(g.f+1,g.t),selected=new Set();
+ sheetShow({title:'Где меняли номер?',next:'Проверить данные',back:false,render(body){
+  if(!available.length){const p=document.createElement('p');p.textContent='Между выбранными станциями нет промежуточных станций.';body.append(p);}
+  for(const x of available){const label=document.createElement('label');label.className='event-check';const cb=document.createElement('input');cb.type='checkbox';cb.onchange=()=>cb.checked?selected.add(x.n):selected.delete(x.n);label.append(cb,document.createTextNode(x.n));body.append(label);}
+  this.onNext=()=>{if(selected.size)splitAt([...selected]);sheetHide();setTimeout(()=>CE?ceEnd(true):reviewTrip(),210);return false;};
+ }});
+}
+function routeRaw(choice,from,to,base,res){return {dir:choice.dir,w:res?'':base.w||'',a:res?'':base.a||'',rho:base.rho||S.rho,res:!!res,chg:false,leg:{[choice.dir]:{v:choice.v,f:from,t:to}},pdir:{},km:'',km_m:false,normKey:base.normKey||normArchive(),group:base.group||crypto.randomUUID()};}
+function journeyPath(from,to){
+ if(from===to)return [];const direct=routeOpts(from).find(x=>x.to===to);if(direct)return [{...direct,from}];let best=null;
+ for(const via of JUNC){const a=routeOpts(from).find(x=>x.to===via),b=a&&routeOpts(via).find(x=>x.to===to);if(b&&(!best||a.km+b.km<best.km))best={km:a.km+b.km,path:[{...a,from},{...b,from:via}]};}return best?.path||null;
+}
+function ceAdd(id,res){
+ const h=S.hist.find(x=>x.id===id);if(!h)return;const last=h.trains.at(-1),start=last.to;let departure=start,arrival=null,withReserve=true;
+ sheetShow({title:res?'Резервный переезд':'Добавить следующий поезд',next:res?'Проверить данные':'Ввести вес и оси',back:false,render(body){
+  const depart=selectField(body,res?'Откуда':'Где приняли следующий поезд'),dest=selectField(body,'Куда');
+  const origins=allFrom().filter(n=>journeyPath(start,n)!==null);depart.replaceChildren(...origins.map(n=>new Option(n,n)));depart.value=start;
+  const label=document.createElement('label');label.className='event-check';const cb=document.createElement('input');cb.type='checkbox';cb.checked=true;label.append(cb,document.createTextNode('До этой станции ехали резервом'));label.hidden=!!res;body.append(label);
+  const fill=()=>{departure=depart.value;const options=routeOpts(departure);dest.replaceChildren(...options.map(o=>new Option(o.to,o.to)));arrival=dest.value;};depart.onchange=fill;dest.onchange=()=>arrival=dest.value;cb.onchange=()=>withReserve=cb.checked;fill();
+  this.onNext=()=>{if(!departure||!arrival)return false;const path=journeyPath(departure,arrival),reserve=journeyPath(start,departure);if(!path||withReserve&&!reserve){toast('Не найден путь между станциями');return false;}if(!ceStart(id))return false;
+   const base={rho:last.rho||h.rho,normKey:normArchive(LATEST_NORMS||N),group:crypto.randomUUID()},newParts=[];
+   if(!res&&withReserve&&departure!==start)for(const p of reserve)newParts.push(routeRaw(p,p.from,p.to,base,true));
+   for(const p of path){const raw=routeRaw(p,p.from,p.to,base,!!res);raw.needsData=!res;newParts.push(raw);}
+   const firstIndex=S.trains.length;S.trains.push(...newParts);applyTrain(res?firstIndex:S.trains.findIndex((t,i)=>i>=firstIndex&&!t.res));sheetHide();setTimeout(()=>res?ceEnd(true):wizOpen('w'),210);return false;
+  };
+ }});
+}
+function finishSetup(){
+ $('bClear').onclick=()=>{const previous=S.tripId&&S.hist.find(x=>(x.trip||x.id)===S.tripId);newTrip();S.checkCandidate=previous?.id||null;toast('Новый расчёт топлива');window.scrollTo({top:0,behavior:'smooth'});};
+ const oldWeight=STEPS.find(x=>x.id==='w');oldWeight.render=renderPairWeight;
+}
+
+function renderPairWeight(body){
+ const root=document.createElement('div');root.className='weight-pairs';const result=document.createElement('p');result.className='wh-out big';const status=document.createElement('p');status.className='note pair-speed';status.textContent='Быстро — ускорение · медленно — по одному';
+ let value=num(S.w);if(!(value>0))value=lastNum('w',3000);value=Math.max(1,Math.min(9999,Math.round(value)));let a=Math.floor(value/100),b=value%100;
+ const row=document.createElement('div');row.className='pair-columns';const wheels=[];
+ function draw(){value=a*100+b;setVal('iW',value?String(value):'');result.innerHTML='<b>'+fmt(value,0)+'</b> т';for(const [vp,n] of [[wheels[0],a],[wheels[1],b]])if(vp)for(let i=0;i<vp.children.length;i++)vp.children[i].setAttribute('aria-selected',String(i===n));}
+ function attachPair(el,initial,set){
+ const H=44,MAX=99*H,clamp=x=>Math.max(0,Math.min(MAX,x));
+ let pointer=null,frame=0,lastFrame=0,suppressClick=false,wheelTimer=0,wheelTime=0;
+ el.style.touchAction='none';el.style.scrollSnapType='none';
+ const stop=()=>{cancelAnimationFrame(frame);frame=0;clearTimeout(wheelTimer);};
+ function snap(){
+  const from=el.scrollTop,to=clamp(Math.round(from/H)*H),start=performance.now();
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.scrollTop=to;return;}
+  function tick(now){const p=Math.min(1,(now-start)/150);el.scrollTop=from+(to-from)*(1-Math.pow(1-p,3));if(p<1)frame=requestAnimationFrame(tick);else frame=0;}
+  frame=requestAnimationFrame(tick);
+ }
+ function coast(velocity){
+  lastFrame=performance.now();
+  function tick(now){const dt=Math.min(32,now-lastFrame);lastFrame=now;velocity*=Math.exp(-dt/145);const before=el.scrollTop;el.scrollTop=clamp(before+velocity*dt);if(Math.abs(velocity)>.035&&Math.abs(el.scrollTop-before)>.01)frame=requestAnimationFrame(tick);else{frame=0;snap();}}
+  frame=requestAnimationFrame(tick);
+ }
+ for(let i=0;i<100;i++){
+  const item=document.createElement('div');item.className='pair-item';item.textContent=String(i).padStart(2,'0');item.setAttribute('role','option');item.setAttribute('aria-selected',String(i===initial));
+  item.onclick=()=>{if(suppressClick)return;stop();el.scrollTop=i*H;};el.append(item);
+ }
+ el.scrollTop=initial*H;
+ el.addEventListener('scroll',()=>{set(Math.max(0,Math.min(99,Math.round(el.scrollTop/H))));draw();},{passive:true});
+ el.addEventListener('pointerdown',e=>{
+  if(e.pointerType==='mouse'&&e.button!==0)return;stop();suppressClick=false;
+  pointer={id:e.pointerId,startY:e.clientY,y:e.clientY,time:performance.now(),speed:0,velocity:0,distance:0};el.setPointerCapture(e.pointerId);
+ });
+ el.addEventListener('pointermove',e=>{
+  if(!pointer||e.pointerId!==pointer.id)return;e.preventDefault();const now=performance.now(),dt=Math.max(8,now-pointer.time),dy=pointer.y-e.clientY;
+  pointer.distance+=Math.abs(dy);pointer.speed=pointer.speed*.2+Math.abs(dy)/dt*.8;
+  const t=Math.max(0,Math.min(1,(pointer.speed-.12)/.85)),gain=1+11*t*t;
+  const feedback=status;if(feedback)feedback.textContent=gain<1.5?'Точно · по одному':'Ускорение ×'+Math.round(gain);
+  const move=dy*gain;el.scrollTop=clamp(el.scrollTop+move);pointer.velocity=pointer.velocity*.25+Math.max(-8,Math.min(8,move/dt))*.75;
+  pointer.y=e.clientY;pointer.time=now;if(pointer.distance>5)suppressClick=true;
+ });
+ el.addEventListener('pointerup',e=>{
+  if(!pointer||e.pointerId!==pointer.id)return;const p=pointer;pointer=null;
+  if(p.distance<=5){const item=document.elementFromPoint(e.clientX,e.clientY)?.closest('.pair-item');if(item&&item.parentElement===el){stop();el.scrollTop=Number(item.textContent)*H;}return;}
+  const fresh=performance.now()-p.time<90;if(fresh&&p.speed>.45)coast(p.velocity);else snap();
+ });
+ for(const type of ['pointercancel','lostpointercapture'])el.addEventListener(type,()=>{if(pointer){pointer=null;stop();snap();}});
+ el.addEventListener('wheel',e=>{
+  e.preventDefault();stop();const now=performance.now(),dt=Math.max(16,now-wheelTime),dy=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?220:1);wheelTime=now;
+  const speed=Math.abs(dy)/dt,t=Math.max(0,Math.min(1,(speed-.3)/2));el.scrollTop=clamp(el.scrollTop+dy*(1+2.5*t*t));wheelTimer=setTimeout(snap,130);
+ },{passive:false});
+ el.addEventListener('keydown',e=>{const delta=e.key==='ArrowDown'?1:e.key==='ArrowUp'?-1:0;if(delta){e.preventDefault();stop();el.scrollTop=clamp((Math.round(el.scrollTop/H)+delta)*H);}});
+}
+
+ for(const [label,n,set] of [['Первые две',a,x=>a=x],['Последние две',b,x=>b=x]]){const column=document.createElement('div'),caption=document.createElement('div'),wrap=document.createElement('div'),vp=document.createElement('div');caption.textContent=label;caption.className='wh-cap';wrap.className='pair-wrap';vp.className='pair-vp';vp.tabIndex=0;vp.setAttribute('role','listbox');vp.setAttribute('aria-label',label+' цифры веса');wrap.append(vp);column.append(caption,wrap);row.append(column);wheels.push(vp);attachPair(vp,n,set);}
+ root.append(row,result,status);body.append(root);draw();requestAnimationFrame(()=>{wheels[0].scrollTop=a*44;wheels[1].scrollTop=b*44;});
+}
+
 /* ---------- запуск ---------- */
-ensureTrains();newTrip();renderCalc();route();
+ensureTrains();newTrip();renderCalc();route();finishSetup();
 
 /* нормы из таблицы: публичная ссылка Яндекс Диска на .xlsx или опубликованная Google Таблица */
 const SHEET_URL="https://disk.yandex.ru/d/DFp2gbZlyaLmhw";
@@ -1525,10 +1745,10 @@ async function sendOut(){
     while((S.out||[]).length){
       const id=S.out[0],e=S.hist.find(h=>h.id===id)||(S.trash||[]).find(h=>h.id===id);
       if(e){
-        const r=await fetch(HISTORY_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({...e,name:ME.name,dev:ME.dev})});
+        const r=await fetch(HISTORY_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({...e,pendingChanges:clone(S.pendingChanges?.[id]||[]),name:ME.name,dev:ME.dev})});
         if(!r.ok)break;const j=await r.json().catch(()=>null);if(!j||!j.ok)break;
       }
-      S.out.shift();persist();
+      const current=S.hist.find(h=>h.id===id);if(!current||current===e){if(current)current.syncedAt=Date.now();S.out=(S.out||[]).filter(x=>x!==id);if(S.pendingChanges)delete S.pendingChanges[id];}persist();renderHist();
     }
     while((S.outDel||[]).length){
       const id=S.outDel[0];
@@ -1550,7 +1770,7 @@ document.addEventListener("visibilitychange",()=>{if(document.visibilityState===
 
 
 </script>
-<script src="settings.js"></script>
+<script src="settings.js?v=calc3"></script>
 <footer class="creator-credit">Создал Жамаев Ахмед 90350</footer><style>.creator-credit{position:relative;max-width:550px;margin:0 auto 24px;padding:13px 20px;text-align:center;font-size:13px;line-height:1.5;color:#d6e2ed;background:rgba(9,21,33,.8);border:1px solid rgba(222,235,248,.14);border-radius:14px;box-shadow:0 8px 26px rgba(0,0,0,.2);backdrop-filter:blur(10px)}@media(max-width:600px){.creator-credit{margin-inline:16px}body::before{background-position:72% center}}</style></body>
 </html>
 
